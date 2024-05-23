@@ -1,5 +1,6 @@
 const express = require('express');
 const homeRoute = require('./routes/home-route');
+const logger = require('./logger/logger');
 
 const app = express();
 
@@ -13,5 +14,5 @@ app.use('/**', (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`App is listening to port ${port}`);
+    logger.info(`App is listening to port ${port}`);
 });
